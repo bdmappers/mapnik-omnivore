@@ -22,6 +22,9 @@
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
     "istanbul": "~0.3.0",
     "jscs": "^1.10.0",
     "jshint": "^2.6.0",
@@ -29,7 +32,7 @@
     "tape": "^4.10.1"
   },
   "scripts": {
-    "test": "jshint index.js test lib && jscs index.js test lib && tape test/*.js",
+    "test": "jshint index.js test lib && eslint index.js test lib && tape test/*.js",
     "coverage": "istanbul cover tape test/*.test.js && coveralls < ./coverage/lcov.info"
   },
   "bin": {
